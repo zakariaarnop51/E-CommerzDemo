@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.Feature-header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.Feature-row{
+    width: 24%;
+}

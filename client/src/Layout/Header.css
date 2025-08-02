@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.Header-main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.Header-contact{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #c0bfbf;
+}
+.Header-textContest{
+    color: #fff;
+    margin-left: 2vh;
+    text-decoration: none;
+}
+
+
+.Header-text{
+    width: 50%;
+    font-size: 20px;
+    cursor: pointer;
+}
+.Header-icon{
+    width: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: right;
+    padding-right: 10px;
+    margin-right: 1vh;
+}
+.Header-icon a{
+    display: inline-block;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.Header-icon a i{
+    color: #04269f;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding:0.3vw;
+}
+.Header-navber{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #c0bfbf;
+}
+.Header-logo{
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Header-logo img {
+    width: 5vw;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    transform: scale(1);
+    border-radius: 50%;
+    &:hover{
+        transform: scale(1.1);
+    }
+
+}
+.Header-menu{
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+}
+.Header-menu a{
+    color: #000;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    &:hover{
+        color: #700909;
+    }
+    &:active{
+        color: rgb(150, 23, 23);
+    }
+    &:focus{
+        outline: none;
+    }
+ 
+}
+
+.Header-search{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #ddd;
+    justify-content: end;
+}
+.Header-search input{
+    width: 90%;
+    padding: 5px;
+    border: none;
+    padding: .7vw;
+    outline: none;
+}
+.Header-search button{
+    width: 10%;
+    padding: 5px 10px;
+    background-color: #04269f;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: .7vw;
+
+}
+.Header-cart{
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    &:hover{
+        color: #700909;
+    }
+    &:active{
+        color: rgb(150, 23, 23);
+    }
+    &:focus{
+        outline: none;
+    }
+    i{
+        font-size: 20px;
+        color: #04269f;
+    }
+}
+.Header-WistList{
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    &:hover{
+        color: #700909;
+    }
+    &:active{
+        color: rgb(150, 23, 23);
+    }
+    &:focus{
+        outline: none;
+    }
+    i{
+        font-size: 20px;
+        color: #04269f;
+    }
+}
+.Header-cart a{
+    display: inline-block;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    &:hover{
+        color: #700909;
+    }
+    &:active{
+        color: rgb(150, 23, 23);
+    }
+    &:focus{
+        outline: none;
+    }
+   i{
+    font-size: 1.5vw;
+    padding: 0.3vw;
+    color: #04269f;
+ 
+   }
+}
+.Header-login{
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    &:hover{
+        color: #700909;
+    }
+    &:active{
+        color: rgb(150, 23, 23);
+    }
+    &:focus{
+        outline: none;
+    }
+   
+}
+
+.Header-login a{
+    display: inline-block;
+    text-decoration: none;
+    color: #f30d0d;
+    font-size: 1.6vw;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    &:hover{
+        color: #700909;
+    }
+    &:active{
+        color: rgb(150, 23, 23);
+    }
+    &:focus{
+        outline: none;
+    }
+   
+}

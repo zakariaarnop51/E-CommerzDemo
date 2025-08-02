@@ -1,0 +1,31 @@
+.N-With {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.lable {
+  color: #000;
+  font-weight: bold;
+  font-size: 1.5vw;
+  margin: 0.4vw;
+}
+.N-select {
+  margin: 0vw 0.3vw;
+  padding: 0.2vw;
+  color: rgb(14, 2, 27);
+  font-weight: bold;
+  font-size: 1vw;
+}
+.N-option {
+  font-size: 1vw;
+  font-weight: bold;
+  color: #000;
+  background: #517193 !important;
+}
+.N-Price{
+   margin: 0vw 0.3vw;
+  padding: 0.2vw;
+  color: rgb(14, 2, 27);
+  font-weight: bold;
+  font-size: 1vw;
+}

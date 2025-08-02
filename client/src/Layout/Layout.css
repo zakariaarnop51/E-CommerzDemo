@@ -1,0 +1,11 @@
+.Body{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.B-row1{
+    width: 16%;
+}
+.B-row2{
+    width: 84%;
+}
