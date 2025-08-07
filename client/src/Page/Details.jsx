@@ -5,13 +5,14 @@ import DetailsComponent from "../Component/DetailsComponent.jsx";
 import Layout from "../Layout/Layout.jsx"; // uncomment if needed
 
 const Details = () => {
-    const { DetailsByProductRequest } = ProductStore();
+    const { DetailsByProductRequest,ReviewRequest } = ProductStore();
     const { id } = useParams();
 
     useEffect(() => {
         if (id) {
             (async () => {
                 await DetailsByProductRequest(id);
+                await ReviewRequest(id);
             })();
         }
     }, [id]);

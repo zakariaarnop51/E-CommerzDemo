@@ -3,13 +3,14 @@ import {useEffect, useState} from "react";
 import  parse from 'html-react-parser';
 import './ComponentcssCss/DetailsComponent.css'
 import Brands from "./Brands.jsx";
+import Reviewed from "./Reviewed.jsx";
+
+
 function DetailsComponent() {
     const {DetailsByProduct,BrandListRequest,BrandList} = ProductStore();
     const [count, setCount] = useState(0);
     const [Quantity, setQuantity] = useState(1);
     const [value, setValue] = useState("Specifications");
-
-
 
     useEffect(() => {
         BrandList===null?BrandListRequest():null;
@@ -119,7 +120,9 @@ function DetailsComponent() {
                 <span className={value==="Review"?"Specifications-ActiveBtn":"Specifications-unActiveBtn"} onClick={()=> setValue("Review")}>Review</span>
             </div>
             <div className={value==="Specifications"?"D-Active":"D-unActive"}>{parse(DetailsByProduct[0]['details']['des'])}</div>
-            <div className={value==="Review"?"D-Active":"D-unActive"} >this is Review</div>
+            <div className={value==="Review"?"D-Active":"D-unActive"} >
+                <Reviewed/>
+            </div>
         </div>
         <Brands/>
     </div>);

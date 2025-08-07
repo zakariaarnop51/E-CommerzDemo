@@ -112,6 +112,15 @@ export const ProductStore = create((set) => ({
       });
     }
   },
+  Reviewed: null,
+  ReviewRequest: async (id) => {
+    let res = await axios.get(`http://localhost:5000/api/v1/ProductReviewList/${id}`);
+    if (res.data["status"] === "success") {
+      set({ Reviewed: res.data["data"] ,
+        FilterList: false
+      });
+    }
+  },
 
 
 }));

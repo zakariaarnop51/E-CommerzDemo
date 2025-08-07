@@ -318,25 +318,42 @@ exports.ProductListByKeywordService = async (req) => {
 exports.ProductReviewListService = async (req) => {
   try {
     let Product_ID = new ObjectId(req.params.ProductID);
-    let MatchStage = { $match: {productID: Product_ID } };
-    let JointWithProfileStage={$lookup:{from:"profiles",localField:"userID",foreignField:"userID",as:"profile"}};
-    let UnWindProfileStage={$unwind:"$profile"}
-    let ProjectionStage ={$project:{"cus_name":1,"des":1,"rating":1}}
-    let data = await ReviewModel.aggregate([
-        MatchStage,
-        JointWithProfileStage,
-        UnWindProfileStage,
-        ProjectionStage
 
+    let MatchStage = { $match: { productID: Product_ID } };
+
+    let JointWithProfileStage = {
+      $lookup: {
+        from: "profiles",
+        localField: "userID",
+        foreignField: "userID",
+        as: "profile"
+      }
+    };
+
+    let UnWindProfileStage = { $unwind: "$profile" };
+
+    let ProjectionStage = {
+      $project: {
+        cus_name: "$profile.cus_name",
+        des: 1,
+        rating: 1
+      }
+    };
+
+    let data = await ReviewModel.aggregate([
+      MatchStage,
+      JointWithProfileStage,
+      UnWindProfileStage,
+      ProjectionStage
     ]);
 
-    return {status:"success",data:data}
+    return { status: "success", data: data };
 
-
-  }catch (e) {
-    return {status:"fail",data:e}.toString()
+  } catch (e) {
+    return { status: "fail", data: e.toString() };
   }
 };
+
 
 
 exports.ProductListByFilterService = async (req) => {
