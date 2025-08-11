@@ -16,7 +16,7 @@ const {UserLogin, UserVerifyLogin, UserLogOut, CreatProfile, UpdateProfile, Read
 const {CreateWishList, RemoveWishList, ReadWishList} = require("../Controller/WishListController");
 const {CreateCardList, RemoveCardList, ReadCardList, UpdateCardList} = require("../Controller/CartListController");
 const {CreateInvoice, InvoiceList, InvoiceProductList, PaymentFail, PaymentIPN, PaymentSuccess, PaymentCancel} = require("../Controller/InvoiceController.");
-const {FeaturesCreate, FeaturesRead} = require("../Controller/FeaturesController");
+const {FeaturesCreate, FeaturesRead, LegalRead, PolicyRead, AboutRead, TremsRead} = require("../Controller/FeaturesController");
 const {ReviewCreate} = require("../Controller/ReviewController");
 const router = express.Router();
 
@@ -69,6 +69,12 @@ router.post("/PaymentIPN/:trxID",PaymentIPN)
 
 //!  Features Api
 router.get("/FeaturesRead", FeaturesRead)
+router.get("/LegalDetails/:type", LegalRead)
+router.get("/PolicyDetails/:type", PolicyRead)
+router.get("/LegalDetails/:type", AboutRead)
+router.get("Trems/Details/:type", TremsRead)
+
+
 
 // Review API
 router.post("/ReviewCreate",AuthVerification,ReviewCreate)
