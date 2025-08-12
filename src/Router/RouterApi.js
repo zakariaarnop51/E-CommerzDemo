@@ -55,7 +55,7 @@ router.post("/UpdateCardList/:cardId",AuthVerification,UpdateCardList);
 router.post("/RemoveCardList",AuthVerification,RemoveCardList);
 
 
-//! Invoice Api
+//! Invoice Api......
 
 router.get("/CreateInvoice",AuthVerification,CreateInvoice)
 
@@ -67,7 +67,7 @@ router.post("/PaymentCancel/:trxID",PaymentCancel)
 router.post("/PaymentFail/:trxID",PaymentFail)
 router.post("/PaymentIPN/:trxID",PaymentIPN)
 
-//!  Features Api
+//!  Features Api.......
 router.get("/FeaturesRead", FeaturesRead)
 router.get("/LegalDetails/:type", LegalRead)
 router.get("/PolicyDetails/:type", PolicyRead)
