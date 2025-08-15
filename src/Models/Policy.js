@@ -1,9 +1,13 @@
-const  mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-const DataSchema = mongoose.Schema({
-        title :{type:String,required:true}
+const PolicySchema = new mongoose.Schema(
+    {
+        description: { type: String, required: true },
+        type: { type: String, required: true },
     },
-    {timestamps:true,versionKey:false});
-const PolicyModel=mongoose.model('Policy',DataSchema);
-module.exports=PolicyModel;
+    { timestamps: true, versionKey: false }
+);
 
+const PolicyModel = mongoose.model('policies', PolicySchema);
+
+module.exports = PolicyModel;

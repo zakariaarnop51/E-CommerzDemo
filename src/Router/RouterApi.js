@@ -69,10 +69,8 @@ router.post("/PaymentIPN/:trxID",PaymentIPN)
 
 //!  Features Api.......
 router.get("/FeaturesRead", FeaturesRead)
-router.get("/LegalDetails/:type", LegalRead)
 router.get("/PolicyDetails/:type", PolicyRead)
-router.get("/LegalDetails/:type", AboutRead)
-router.get("Trems/Details/:type", TremsRead)
+
 
 
 
