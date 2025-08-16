@@ -1,8 +1,8 @@
-import React from 'react'
+import '../Components/Email.css';
 
 function Email() {
     return (
-        <div>
+        <div className='email-container'>
             <h1>Enter Your Email</h1>
             <p>A verification code will be the email address your provide</p>
             <input type="text" placeholder='Email address' />
