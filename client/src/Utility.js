@@ -17,7 +17,7 @@ export const getEmail = () => {
 }
 export const showAlert = (title, text, icon) => {
     Swalow.fire({
-        title: ,
+        title: title,
         text: text,
         icon: icon,
         confirmButtonText: 'OK',

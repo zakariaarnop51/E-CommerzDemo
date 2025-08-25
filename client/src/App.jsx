@@ -6,6 +6,7 @@ import ProductByKeyword from "./Page/ProductByKeyword";
 import ProductByFilter from "./Page/ProductByFilter.jsx";
 import Details from "./Page/Details.jsx";
 import FooterComponent from "./Component/FooterComponent.jsx";
+import Email from "./Component/Email.jsx";
 
 
 function App() {
@@ -24,7 +25,10 @@ function App() {
                     <Route path="/howtobuy/:id" element={<FooterComponent/>}/>
                     <Route path="/contact/:id" element={<FooterComponent/>}/>
                     <Route path="/complain/:id" element={<FooterComponent/>}/>
-                    <Route path="/Details/:id" element={<FooterComponent/>}/>
+                    <Route path="/Details/:id" element={<Details/>}/>
+
+                    {/* login */}
+                    <Route path="/Email" element={<Email/>}/>
                 </Routes>
             </BrowserRouter>
         </div>
