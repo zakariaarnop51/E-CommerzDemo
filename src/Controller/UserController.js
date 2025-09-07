@@ -16,11 +16,12 @@ exports.UserVerifyLogin = async (req, res) => {
         if (result["status"] === "success") {
             let cookieOption = {
                 expires: new Date(Date.now() + 24 * 60 * 60 * 1000),
-                httpOnly: true,
+                httpOnly: false,
+
                 
             };
 
-            res.cookie("token", result["token"], cookieOption);
+             res.cookie("token", result["token"], cookieOption);
             return res.status(200).json(result);
         } else {
             return res.status(401).json(result);
@@ -35,7 +36,7 @@ exports.UserVerifyLogin = async (req, res) => {
 exports.UserLogOut=async (req,res)=>{
     let CookieOption={
         expires:new Date(Date.now()-24*6060*1000),
-        httponly:true
+        httponly:false,
     }
     res.cookie("token","",CookieOption);
     return res.status(200).json({

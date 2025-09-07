@@ -1,11 +1,14 @@
 import { ProductStore } from '../Store/ProductStore';
+import { Logout } from '../validationHelper';
 import './Header.css'
 import { Link } from 'react-router-dom';
+import { isLogin } from '../validationHelper';
+
 
 function Header() {
+  const { Keyword, setKeyword } = ProductStore();
 
-  const{Keyword,setKeyword}=ProductStore()
-  
+
 
   return (
 
@@ -30,7 +33,7 @@ function Header() {
           <Link to="/"> Home</Link>
         </div>
         <div className="Header-search">
-          <input onChange={(e)=>{setKeyword(e.target.value)}} type="text" placeholder="Search..." />
+          <input onChange={(e) => { setKeyword(e.target.value) }} type="text" placeholder="Search..." />
           <Link to={Keyword.trim() ? `/ProductByKeyword/${Keyword}` : '/'}><i className="bi bi-search"></i></Link>
         </div>
         <div className="Header-cart">
@@ -40,7 +43,9 @@ function Header() {
           <Link to="#"><i className="bi bi-heart-fill"></i></Link>
         </div>
         <div className="Header-login">
-          <Link to="/Email">Login</Link>
+          {
+            !isLogin() ? <Link to='/Email'>Login</Link> : <div><Link to='/Profile'>Profile</Link><Link onClick={()=>{Logout()}}>Logout</Link></div>
+          }
         </div>
 
       </div>
